@@ -1,0 +1,4 @@
+# Use goreman to run `go get github.com/mattn/goreman`
+node1: ./stcache --node=1 --http=127.0.0.1:6000 --raft=127.0.0.1:7000 --bootstrap true
+node2: ./stcache --node=2 --http=127.0.0.1:6001 --raft=127.0.0.1:7001 --join=127.0.0.1:6000
+node3: ./stcache --node=3 --http=127.0.0.1:6002 --raft=127.0.0.1:7002 --join=127.0.0.1:6000
